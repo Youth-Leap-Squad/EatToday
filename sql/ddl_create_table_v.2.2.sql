@@ -514,12 +514,12 @@ VALUES
     ('menu.png', 'image/png', 'menu_20250905.png', '/uploads/dm/1', '2025-09-05', 1);
 
 -- 5) 안주 게시글 반응(좋아요/싫어요 등 타입 가정)
-INSERT INTO food_post_likes (member_no, board_no, likes_type, likes_count)
+INSERT INTO food_post_likes (member_no, board_no, likes_type)
 VALUES
-    (3, 1, 'like', 1),
-    (4, 2, 'like', 1),
-    (5, 3, 'like', 1),
-    (2, 4, 'like', 1);
+    (3, 1, 'like'),
+    (4, 2, 'like'),
+    (5, 3, 'like'),
+    (2, 4, 'like');
 
 -- 6) 안주 게시글 댓글
 INSERT INTO food_comment (member_no, board_no, fc_content, fc_date)
@@ -607,4 +607,5 @@ VALUES
     (1, '활발한 파티러버 스타일에 어울리는 맥주', 1),
     (2, '차분히 즐길 수 있는 와인 추천', 3),
     (3, '전통 한식과 어울리는 소주 추천', 2),
+
     (4, '새로운 조합에 도전하는 하이볼 추천', 4);
