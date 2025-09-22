@@ -1,5 +1,5 @@
 ## 오늘! 뭐랑?
-<img src="https://github.com/Youth-Leap-Squad/Dream-High/blob/main/src/assets/img/포스터_초안.jpg?raw=true" width="50%" />
+<img src="https://github.com/Youth-Leap-Squad/Dream-High/blob/main/src/assets/img/포스터_초안.jpg?raw=true" width="45%" />
 
 
 ## 📖 목차
