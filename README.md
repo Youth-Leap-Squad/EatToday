@@ -112,19 +112,19 @@
         </a>
       </td>
       <td>
-        <a href="https://github.com/HoodRyan" target="_blank">
+        <a href="https://github.com/woo-kyoung-nam" target="_blank">
           <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EA%B5%90%EB%A9%94%EC%9D%B4_%EC%9A%B0%E3%85%95%E3%84%B1%E3%85%87.jpg" width="210" style="border-radius:100%" alt="배태용"/><br/>
           <b>남우경</b>
         </a>
       </td>
       <td>
-        <a href="https://github.com/thdgudtjr0415" target="_blank">
+        <a href="https://github.com/leejaeguen" target="_blank">
           <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EC%A0%A0%EC%9D%B4%EC%B8%A0.jpg" width="210" style="border-radius:100%" alt="송형석"/><br/>
           <b>이재근</b>
         </a>
       </td>
       <td>
-        <a href="https://github.com/huni2" target="_blank">
+        <a href="https://github.com/golealda" target="_blank">
           <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%98%84%EC%88%98_%EC%9D%B4%EB%85%B8%EC%8A%A4%EC%BC%80.jpg" width="210" style="border-radius:100%" alt="허창훈"/><br/>
           <b>이현수</b>
         </a>
@@ -241,37 +241,44 @@
 <img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
 </details>
 
+---
+## 🏗️ 설계 및 아키텍처 (Design & Architecture)
 
-## 🔗 UML
+### DDD [상세보기](https://miro.com/app/board/uXjVJM9P4HM=/?share_link_id=369149134500)
+<details>
+  <summary><b>DDD</b></summary>
+<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+</details>
 
-* 유스케이스/클래스/시퀀스 다이어그램: *(이미지/링크 추가 예정)*
+---
+## 🔌 인터페이스 및 API (Interfaces & APIs)
+
+### REST API 문서 [상세보기]()
+<details>
+  <summary><b>POSTMAN</b></summary>
+<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+</details>
+
+---
+## ✅ 테스트 및 품질 (Testing & Quality Assurance)
+
+### TEST 코드 
+<details>
+  <summary><b>POSTMAN</b></summary>
+<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+
+  <summary><b>POSTMAN</b></summary>
+<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+  
+</details>
+
+
+
+
 
 ---
 
-## 📋 테스트 CASE
 
-* 테스트 케이스 시트: *(링크 추가 예정)*
-* GIF 시연 (예시 경로 유지)
-
-  * 로그인 / 회원가입 / 게시글 CRUD / 파일첨부 / 신고 / 리액션 / 검색
-
----
-
-## 📊 DB 설계
-
-* 논리/물리 ERD: *(이미지 연결 예정)*
-* 핵심 테이블(요약)
-
-  * `member`, `role`, `post`, `post_file`, `post_comment`, `food_post_likes`, `report`, `report_history`, `bookmark`
-  * 제약: `food_post_likes`는 **삼중 PK**로 중복 리액션 방지, `post.confirmed_yn` 승인 후 수정 금지
-
----
-
-## 📑 테이블 정의서
-
-* DA# 산출물 이미지 / 표: *(추가 예정)*
-
----
 
 ## 🎞 Replication
 
