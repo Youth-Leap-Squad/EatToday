@@ -5,7 +5,10 @@
   <img src="https://github.com/Youth-Leap-Squad/Dream-High/blob/main/src/assets/img/포스터_초안.jpg?raw=true" width="45%"/>
 </p>
 
-> 한 마디: **오늘 마실 술, 뭐랑 먹을까?** 취향 기반으로 술-안주 페어링을 추천하고, 후기와 레시피, 페어링 팁을 공유하는 커뮤니티입니다.
+
+<h1>오늘의 술, 딱 맞는 안주. 오늘! 뭐랑?</h1>
+
+> **오늘 마실 술, 뭐랑 먹을까?** 취향 기반으로 술-안주 페어링을 추천하고, 후기와 레시피, 페어링 팁을 공유하는 커뮤니티입니다.
 
 ---
 
@@ -41,15 +44,20 @@
 
 ## 📌 **프로젝트 소개**
 
-**오늘! 뭐랑?**은 사용자의 **술 취향(도수/향/바디감/탄산감/당도)**과 **상황(예산/인원/분위기/계절)**을 기반으로, 가장 잘 어울리는 **안주/요리 페어링**을 추천하고 그 결과를 **커뮤니티**에서 공유·토론할 수 있게 만든 서비스입니다.
-
+**오늘! 뭐랑?** 은 사용자의 **술 취향**과 **상황**을 기반으로, 가장 잘 어울리는 **안주/요리 페어링**을 추천하고 그 결과를 **커뮤니티**에서 공유·토론할 수 있게 만든 서비스입니다.
+<br>
 * 🧪 **페어링 추천 엔진**: 술(소주/맥주/와인/사케/위스키 등)과 안주 태그(매콤/담백/기름짐/바삭/풍미 등) 매칭 점수 기반 추천
+<br><br>
 * 📝 **레시피/후기/사진 공유**: 누구나 요리·페어링 레시피와 맛 노트를 카드 형태로 게시
+<br><br>
 * 💬 **취향형 반응(리액션) 4종**: `술술 들어가요` · `참신해요` · `맛없어요` · `궁금해요`
-* 🛡️ **안전한 커뮤니티**: 신고/블랙리스트, 운영자 승인(confirmed_yn) 로직, 버전 이력 관리
-* 📅 **마이페이지**: 내가 쓴 글/댓글/북마크/팔로우, 개인 일정과 시음 기록
-
-> 슬로건: **“오늘의 술, 딱 맞는 안주. 오늘! 뭐랑?”**
+<br><br>
+* 🛡️ **안전한 커뮤니티**: 신고/블랙리스트, 운영자 승인 로직, 버전 이력 관리
+<br><br>
+* 📅 **SNS 기능**: 내가 쓴 글/댓글/북마크/팔로우, 개인 일정과 시음 기록
+<br><br>
+  
+   
 
 ---
 
@@ -74,43 +82,43 @@
 <table style="width:100%;">
   <thead>
     <tr align="center">
-      <th>팀장</th>
-      <th>백엔드</th>
-      <th>백엔드</th>
-      <th>프론트엔드</th>
-      <th>기획/데이터</th>
+      <th>팀원</th>
+      <th>팀원</th>
+      <th>팀원</th>
+      <th>팀원</th>
+      <th>팀원</th>
     </tr>
   </thead>
   <tbody>
     <tr align="center">
       <td>
         <a href="https://github.com/Yunji458" target="_blank">
-          <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MTBfMjA3%2FMDAxNzE4MDI5OTA1NzI4.RSKA7rjFVY8n4Zi2wUzlakJGgeUKq0zuiF_yhrDebTcg.hRl-TQCTrjwGayAPRsjojqpOjGPEUWvldyx2FJ5NDksg.JPEG%2F1718029903817.jpg&type=sc960_832" width="210" style="border-radius:100%" alt="김윤지"/><br/>
+          <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EC%9D%B4%EA%B5%AC%EB%A1%9C.jpg" width="210" style="border-radius:100%" alt="김윤지"/><br/>
           <b>김윤지</b>
         </a>
       </td>
       <td>
         <a href="https://github.com/pilltong22" target="_blank">
-          <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA1MDlfODEg%2FMDAxNjIwNDg4NTgwODUx.hjU2s6bLflkLU0IdbkIC4P8QV82sPFcUZFo2RHC1BKMg.wjzdf9woxbYPlqS-hoGefXvN-t2Ld2OaW5ocfDxRBTwg.PNG.hksong4907%2FKakaoTalk_20210509_003923593_21.png&type=ff332_332" width="210" style="border-radius:100%" alt="김진호"/><br/>
+          <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%95%98%EC%BF%A0%EC%A7%80.jpg" width="210" style="border-radius:100%" alt="김진호"/><br/>
           <b>김진호</b>
         </a>
       </td>
       <td>
         <a href="https://github.com/HoodRyan" target="_blank">
-          <img src="https://i.namu.wiki/i/ZogbltHyK04eTu2NPNWvK9iX3X3Rge5JmaD5y2WvuZWf_jysIij8FmDEoOUfYOnYTTD-z84nvoTZ8HHlStPwpw.webp" width="210" style="border-radius:100%" alt="배태용"/><br/>
+          <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EA%B5%90%EB%A9%94%EC%9D%B4_%EC%9A%B0%E3%85%95%E3%84%B1%E3%85%87.jpg" width="210" style="border-radius:100%" alt="배태용"/><br/>
           <b>남우경</b>
         </a>
       </td>
       <td>
         <a href="https://github.com/thdgudtjr0415" target="_blank">
-          <img src="https://r2.jjalbot.com/2023/03/cBoF02SUG1.jpeg" width="210" style="border-radius:100%" alt="송형석"/><br/>
+          <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EC%A0%A0%EC%9D%B4%EC%B8%A0.jpg" width="210" style="border-radius:100%" alt="송형석"/><br/>
           <b>이재근</b>
         </a>
       </td>
       <td>
         <a href="https://github.com/huni2" target="_blank">
-          <img src="https://mblogthumb-phinf.pstatic.net/MjAyMTA4MjJfMzMg/MDAxNjI5NTYxNTc3NDMw.7riwbpY2GBf3fDkZKRn2ZcQCr175OpO1iGvJjFbIAZ8g.QPUGevGXt5DBFDmgRV7a1_d0jbqlubauJtNCP3t9mHkg.JPEG.chooddingg/IMG_5764.JPG?type=w800" width="210" style="border-radius:100%" alt="허창훈"/><br/>
-          <b>이현수수</b>
+          <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%98%84%EC%88%98_%EC%9D%B4%EB%85%B8%EC%8A%A4%EC%BC%80.jpg" width="210" style="border-radius:100%" alt="허창훈"/><br/>
+          <b>이현수</b>
         </a>
       </td>
     </tr>
@@ -129,16 +137,16 @@
 
 ### 📰 커뮤니티
 
-* **게시글/댓글/파일첨부** CRUD
-* **리액션 4종(ENUM)**: `술술 들어가요` · `참신해요` · `맛없어요` · `궁금해요`
-* **신고/블랙리스트**: 운영자 승인(confirmed_yn=true 시 게시글 수정 금지)
+* **게시글/댓글/파일첨부** 
+* **리액션 4종**: `술술 들어가요` · `참신해요` · `맛없어요` · `궁금해요`
+* **신고/블랙리스트**: 운영자 승인시 게시글 게시 / 신고 일정 횟수시 활동정지
 
-### 👤 마이페이지
+### 👤 SNS
 
 * 내 페어링 기록, 즐겨찾기(북마크), 작성글/댓글/신고내역
 * 알림: 즐겨찾기 메뉴 리마인드, 마감 임박 이벤트(예: 예약/행사)
 
-### 📅 개인 일정(선택)
+### 🎉 이벤트
 
 * 약속/모임 캘린더, 페어링 제안 초대, 체크리스트
 
@@ -146,14 +154,18 @@
 
 ## 📡 기술 스택
 
-**Backend**: Java 17, Spring Boot 3.x, Spring MVC, Spring Security(JWT), Validation<br>
-**Persistence**: **CQRS** (Command=JPA/Hibernate, Query=MyBatis), MariaDB 10.x, MySQL Driver<br>
-**Infra/Dev**: Gradle, IntelliJ, Lombok, Spring DevTools, ERDCloud, DA# Modeler, Draw.io<br>
-**Ops**: Linux/Ubuntu, GitHub Projects/Issues, (옵션) Nginx, Docker, (옵션) Redis Cache<br>
-**Testing**: JUnit5, MockMvc, RestDocs(옵션)
+## 📡 기술 스택
+🖥️ 운영체제 & 개발환경
+<img src="https://img.shields.io/badge/linux-%23FCC624.svg?&style=for-the-badge&logo=linux&logoColor=black" /> <img src="https://img.shields.io/badge/ubuntu-%23E95420.svg?&style=for-the-badge&logo=ubuntu&logoColor=white" /> 
 
-Badges: ![linux](https://img.shields.io/badge/linux-%23FCC624.svg?\&style=for-the-badge\&logo=linux\&logoColor=black) ![ubuntu](https://img.shields.io/badge/ubuntu-%23E95420.svg?\&style=for-the-badge\&logo=ubuntu\&logoColor=white) ![mariadb](https://img.shields.io/badge/mariadb-%23003545.svg?\&style=for-the-badge\&logo=mariadb\&logoColor=white) ![github](https://img.shields.io/badge/github-%23181717.svg?\&style=for-the-badge\&logo=github\&logoColor=white) ![notion](https://img.shields.io/badge/notion-%23000000.svg?\&style=for-the-badge\&logo=notion\&logoColor=white)
+🗃️ 데이터베이스 
+<img src="https://img.shields.io/badge/mariadb-%23003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white" /> 
 
+📦 버전 관리 & 협업
+<img src="https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/notion-%23000000.svg?&style=for-the-badge&logo=notion&logoColor=white" />
+
+📝 작업 툴
+<img src="https://img.shields.io/badge/Draw.io-F08705?style=for-the-badge&logo=diagrams.net&logoColor=white" /><img src="https://img.shields.io/badge/ERD_Cloud-4A90E2?style=for-the-badge&logo=cloud&logoColor=white" /> <img src="https://img.shields.io/badge/DA%23MODELER-1D3557?style=for-the-badge&logo=diagram&logoColor=white" /><img src="https://img.shields.io/badge/IntelliJIDEA-4CAF50.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" /><img src="https://img.shields.io/badge/HeidiSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" /> 
 ---
 
 ## 🧱 아키텍처 & CQRS
