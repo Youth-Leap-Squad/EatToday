@@ -2,7 +2,7 @@
 
 <p align="center">
   <!-- 프로젝트 대표 이미지/포스터가 있다면 아래 src 교체 -->
-  <img src="https://github.com/Youth-Leap-Squad/Dream-High/blob/main/src/assets/img/포스터_초안.jpg?raw=true" width="45%"/>
+  <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%8F%AC%EC%8A%A4%ED%84%B0_%EC%9C%84%EC%95%84%EB%9E%98%20%EC%9E%90%EB%A5%B8%20%EB%B2%84%EC%A0%84.jpg" width="45%"/>
 </p>
 
 
@@ -64,20 +64,20 @@
 ## 🧷 프로젝트 배경
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%99%88%EC%88%A0%20%ED%8A%B8%EB%A0%8C%EB%93%9C.jpg" width="350" />
-  <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EC%88%A0%20%EA%B5%AC%EB%8F%85%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EA%B3%A0%EA%B0%9D%20%EB%B9%84%EC%A4%91%20%EC%A6%9D%EA%B0%80(20%2C30%EB%8C%80).jpg" width="350" />
+  <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%EC%88%A0%20%EA%B5%AC%EB%8F%85%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EA%B3%A0%EA%B0%9D%20%EB%B9%84%EC%A4%91%20%EC%A6%9D%EA%B0%80(20,30%EB%8C%80).jpg?raw=true" width="400" />
+  <img src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%99%88%EC%88%A0%20%ED%8A%B8%EB%A0%8C%EB%93%9C_%EC%88%98%EC%A0%95%EB%B3%B8.jpg?raw=true" width="400" />
 </div>
 
 
-### 1. 20‧30대 술 구독 서비스 증가 → 다양한 술과 안주에 대한 관심 증가
+### (1). 20‧30대 술 구독 서비스 증가 → 다양한 술과 안주에 대한 관심 증가
 
 * 구독 서비스로 접하는 새로운 주류가 많아지면서, 소비자들은 어떤 안주와 조합해야 할지 고민이 늘어남.
 
-### 2. 홈술 / 혼술 트렌드 → 집에서 즐길 수 있는 술-안주 페어링 수요 증가
+### (2). 홈술 / 혼술 트렌드 → 집에서 즐길 수 있는 술-안주 페어링 수요 증가
 
 * 집에서 혼자 또는 소규모로 술을 즐기는 문화 확산 → 간편하지만 잘 어울리는 안주 정보 필요.
 
-### 3. 후기·레시피 공유 니즈 증가 → 커뮤니티 기반 페어링 플랫폼 필요
+### (3). 후기·레시피 공유 니즈 증가 → 커뮤니티 기반 페어링 플랫폼 필요
 
 *  사용자들은 단순히 먹고 마시는 것을 넘어서 직접 경험을 공유하고 싶어 함.
 
@@ -169,40 +169,78 @@
 
 
 ## 📡 기술 스택
-🖥️ 운영체제 & 개발환경
-<img src="https://img.shields.io/badge/linux-%23FCC624.svg?&style=for-the-badge&logo=linux&logoColor=black" /> <img src="https://img.shields.io/badge/ubuntu-%23E95420.svg?&style=for-the-badge&logo=ubuntu&logoColor=white" /> 
 
-🗃️ 데이터베이스 
-<img src="https://img.shields.io/badge/mariadb-%23003545.svg?&style=for-the-badge&logo=mariadb&logoColor=white" /> 
+### Backend
+![Java 17](https://img.shields.io/badge/Java%2017-007396?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot%203.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
-📦 버전 관리 & 협업
-<img src="https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/notion-%23000000.svg?&style=for-the-badge&logo=notion&logoColor=white" />
+### Test & Docs
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-📝 작업 툴
-<img src="https://img.shields.io/badge/Draw.io-F08705?style=for-the-badge&logo=diagrams.net&logoColor=white" /><img src="https://img.shields.io/badge/ERD_Cloud-4A90E2?style=for-the-badge&logo=cloud&logoColor=white" /> <img src="https://img.shields.io/badge/DA%23MODELER-1D3557?style=for-the-badge&logo=diagram&logoColor=white" /><img src="https://img.shields.io/badge/IntelliJIDEA-4CAF50.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" /><img src="https://img.shields.io/badge/HeidiSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" /> 
----
+
+###  Tools & Collaboration
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![ERD_Cloud](https://img.shields.io/badge/ERD_Cloud-4A90E2?style=for-the-badge&logo=cloud&logoColor=white)
+![IntelliJ](https://img.shields.io/badge/IntelliJIDEA-4CAF50.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+![HeidiSQL](https://img.shields.io/badge/HeidiSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+<br>
+
 
 ## 🧱 아키텍처 & CQRS
 
 * **Command(JPA)**: 회원가입/로그인, 게시글/댓글 생성·수정·삭제, 리액션 생성 등 **상태 변경** 처리
+  
 * **Query(MyBatis)**: 페어링 추천 결과, 게시글 목록·검색, 통계/집계, 신고내역 등 **조회 최적화**
+  
 * **도메인 규칙**: `approved(post.confirmed_yn=true)`가 되면 **수정 불가** (이력만 추가)
+  
 * **리액션 스키마 예시**: `food_post_likes(member_no, board_no, likes_type ENUM('술술 들어가요','참신해요','맛없어요','궁금해요'), PK(member_no,board_no,likes_type))`
 
 ---
 
-## 📊 요구사항 명세서
+## 📋 관리 및 계획 (Management & Planning)
 
-* 문서/시트 링크: *(추가 예정)*
-* 핵심 요구사항 요약
+### WBS [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
+<details>
+  <summary><b>WBS</b></summary>
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_1.png" />
 
-  * [R01] 술-안주 페어링 추천: 필터(술/상황/예산) 입력 → Top-N 추천
-  * [R02] 게시판 CRUD + 파일업로드 + 검색 + 신고
-  * [R03] 리액션 4종 ENUM 및 중복 방지(PK 복합키)
-  * [R04] 운영 승인(confirmed_yn) 로직 & 수정 제한
-  * [R05] 마이페이지: 작성글/댓글/북마크/일정 조회
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_2.png" />
+
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_3.png" />
+</details>
+
+
+### 요구사항 기능 명세서 [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
+<details>
+  <summary><b>요구사항 명세서</b></summary>
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_1.png" />
+
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_2.png" />
+
+<img width="1714" height="1863" alt="KakaoTalk_20250911_120034881" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8%EC%84%9C_3.png" />
+</details>
 
 ---
+
+## 🗂️ 데이터 및 구조 (Data & Structure)
+
+### ERD [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
+<details>
+  <summary><b>ERD</b></summary>
+<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+</details>
+
 
 ## 🔗 UML
 
