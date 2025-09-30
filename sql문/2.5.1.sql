@@ -1,4 +1,3 @@
--- 제일 깊은 자식부터 제거
 DROP TABLE IF EXISTS `dm_file_upload`;
 DROP TABLE IF EXISTS `photo_review_comment`;
 DROP TABLE IF EXISTS `pr_file_upload`;
@@ -11,6 +10,7 @@ DROP TABLE IF EXISTS `food_comment`;
 DROP TABLE IF EXISTS `albti_output`;
 DROP TABLE IF EXISTS `albti_join_member`;
 DROP TABLE IF EXISTS `individual_world_cup_food`;
+DROP TABLE IF EXISTS `qna_comment`;
 
 -- 중간 계층
 DROP TABLE IF EXISTS `direct_message`;
@@ -32,15 +32,9 @@ DROP TABLE IF EXISTS `alcohol`;
 DROP TABLE IF EXISTS `member`;
 DROP TABLE IF EXISTS `role`;
 
-CREATE TABLE `role` (
-                        role_no INT NOT NULL AUTO_INCREMENT COMMENT '권한번호',
-                        role_name VARCHAR(255) NOT NULL COMMENT '권한명',
-                        CONSTRAINT `PK_role` PRIMARY KEY (role_no)
-) ENGINE=INNODB COMMENT '권한 정보';
-
 CREATE TABLE `member` (
                           member_no INT NOT NULL AUTO_INCREMENT COMMENT '회원번호',
-                          member_role_no INT NOT NULL COMMENT '권한번호',
+                          member_role ENUM('USER','ADMIN') NOT NULL COMMENT '권한',
                           member_id VARCHAR(255) NOT NULL COMMENT '아이디',
                           member_pw VARCHAR(255) NOT NULL COMMENT '비밀번호',
                           member_name VARCHAR(255) NOT NULL COMMENT '회원명',
@@ -50,9 +44,10 @@ CREATE TABLE `member` (
                           member_active BOOLEAN NOT NULL DEFAULT TRUE COMMENT '회원 활동여부',
                           member_at VARCHAR(255) NOT NULL DEFAULT 0 COMMENT '계정 생성일',
                           member_level INT COMMENT '회원등급',
-                          CONSTRAINT PK_member PRIMARY KEY (member_no),
-                          CONSTRAINT FK_member_role FOREIGN KEY (member_role_no) REFERENCES role(role_no)
+                          CONSTRAINT PK_member PRIMARY KEY (member_no)
+
 ) ENGINE=INNODB COMMENT '회원 정보';
+
 
 CREATE TABLE `secession` (
                              member_no INT NOT NULL COMMENT '회원번호',
@@ -62,7 +57,7 @@ CREATE TABLE `secession` (
 
 CREATE TABLE `alcohol` (
                            `alcohol_no` INT NOT NULL AUTO_INCREMENT,
-                           `alcohol_type` INT NOT NULL,
+                           `alcohol_type` VARCHAR(255) NOT NULL,
                            `alcohol_explain` VARCHAR(255) NOT NULL,
                            `alcohol_picture` VARCHAR(255) NOT NULL,
                            CONSTRAINT PK_ALCOHOL PRIMARY KEY (alcohol_no)
@@ -71,29 +66,35 @@ CREATE TABLE `alcohol` (
 CREATE TABLE `food_post` (
                              `board_no` INT NOT NULL AUTO_INCREMENT,
                              `alcohol_no` INT NOT NULL,
+                             `member_no` INT NOT NULL,
                              `board_title` VARCHAR(255) NOT NULL,
                              `board_content` VARCHAR(255) NOT NULL,
                              `food_explain` VARCHAR(255) NOT NULL,
-                             `member_no` INT NOT NULL,
-                             `food_picture` VARCHAR(255),
-                             `board_date` VARCHAR(255) NOT NULL,
+                             `food_picture` VARCHAR(255) NULL,
+                             `board_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                              `board_seq` INT NOT NULL DEFAULT 0,
-                             `confirmed_yn` BOOLEAN NOT NULL DEFAULT FALSE,
-                             CONSTRAINT PK_FOOD_POST  PRIMARY KEY (board_no),
-                             CONSTRAINT FK_FOOD_POST_MEMBER  FOREIGN KEY (alcohol_no) REFERENCES alcohol(alcohol_no),
-                             CONSTRAINT FK_FOOD_POST_MEMBER_NO  FOREIGN KEY (member_no) REFERENCES member(member_no)
-) ENGINE=INNODB COMMENT '안주 게시글';
+                             `confirmed_yn` CHAR(1) NOT NULL DEFAULT 'T',
+                             `likes_no_1` INT NOT NULL DEFAULT 0,
+                             `likes_no_2` INT NOT NULL DEFAULT 0,
+                             `likes_no_3` INT NOT NULL DEFAULT 0,
+                             `likes_no_4` INT NOT NULL DEFAULT 0,
+                             CONSTRAINT `PK_FOOD_POST` PRIMARY KEY (`board_no`),
+                             CONSTRAINT `FK_FOOD_POST_ALCOHOL` FOREIGN KEY (`alcohol_no`) REFERENCES `alcohol`(`alcohol_no`),
+                             CONSTRAINT `FK_FOOD_POST_MEMBER` FOREIGN KEY (`member_no`) REFERENCES `member`(`member_no`)
+) ENGINE=INNODB COMMENT='안주 게시글';
 
 
 CREATE TABLE `photo_review` (
                                 review_no     INT NOT NULL AUTO_INCREMENT,
                                 board_no      INT NOT NULL,
+                                member_no      INT NOT NULL,
                                 review_title  VARCHAR(255)  NOT NULL,
-                                review_data   VARCHAR(255) NOT NULL,
+                                review_date   VARCHAR(255) NOT NULL,
                                 review_content VARCHAR(255) NOT NULL,
                                 review_like   INT NOT NULL,
                                 CONSTRAINT PK_photo_review PRIMARY KEY (review_no),
-                                CONSTRAINT FK_pr_board FOREIGN KEY (board_no) REFERENCES food_post(board_no)
+                                CONSTRAINT FK_pr_board FOREIGN KEY (board_no) REFERENCES food_post(board_no),
+                                CONSTRAINT FK_pr_member FOREIGN KEY (member_no) REFERENCES member(member_no)
 )ENGINE=INNODB COMMENT '사진 리뷰';
 
 
@@ -114,13 +115,31 @@ CREATE TABLE `qna_post` (
                             CONSTRAINT FK_qna_post_member FOREIGN KEY (member_no) REFERENCES member (member_no)
 ) ENGINE=INNODB COMMENT '문의사항 게시글';
 
+CREATE TABLE `qna_comment` (
+                               `comment_no` INT NOT NULL AUTO_INCREMENT COMMENT '문의사항 댓글 번호',
+                               `qna_post_no` INT NOT NULL COMMENT '문의사항 번호',
+                               `comment_member_no` INT NOT NULL COMMENT '답변자 번호(운영자)',
+                               `comment_content` VARCHAR(255) NOT NULL COMMENT '답변 내용',
+                               `comment_at` VARCHAR(255) NOT NULL COMMENT '작성 일시',
+                               CONSTRAINT PK_qna_comment PRIMARY KEY (comment_no),
+                               KEY `idx_qna_comment_post` (`qna_post_no`),
+                               CONSTRAINT FK_qna_post_no FOREIGN KEY (qna_post_no) REFERENCES qna_post (qna_post_no) ON UPDATE CASCADE ON DELETE CASCADE,
+                               CONSTRAINT FK_comment_post_member FOREIGN KEY (comment_member_no) REFERENCES member (member_no) ON UPDATE CASCADE ON DELETE CASCADE
+
+) ENGINE=INNODB COMMENT='문의사항 답변';
 
 CREATE TABLE `follow` (
-                          following INT NOT NULL DEFAULT 0 COMMENT '팔로잉',
-                          follower INT NOT NULL DEFAULT 0 COMMENT '팔로워',
-                          CONSTRAINT FK_follow_following FOREIGN KEY (following) REFERENCES member(member_no),
-                          CONSTRAINT FK_follow_follower  FOREIGN KEY (follower)  REFERENCES member(member_no)
-) ENGINE=INNODB COMMENT '팔로잉';
+                          follower_no  INT NOT NULL,
+                          following_no INT NOT NULL,
+                          created_at   DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                          CONSTRAINT FK_follow_follower
+                              FOREIGN KEY (follower_no)  REFERENCES member(member_no)
+                                  ON DELETE CASCADE ON UPDATE CASCADE,
+                          CONSTRAINT FK_follow_following
+                              FOREIGN KEY (following_no) REFERENCES member(member_no)
+                                  ON DELETE CASCADE ON UPDATE CASCADE,
+                          KEY idx_follow_following_no (following_no)
+) ENGINE=InnoDB COMMENT='팔로우';
 
 
 CREATE TABLE `pr_file_upload` (
@@ -292,12 +311,11 @@ CREATE TABLE `dm_file_upload` (
 CREATE TABLE `food_post_likes` (
                                    `member_no` INT NOT NULL,
                                    `board_no` INT NOT NULL,
-                                   `likes_type` VARCHAR(255) NOT NULL,
-                                   `likes_count` INT,
-                                   CONSTRAINT PK_FOOD_LIKES PRIMARY KEY(member_no,board_no),
-                                   CONSTRAINT FK_FOOD_POST_LIKES_MEMBER  FOREIGN KEY (member_no) REFERENCES member(member_no),
-                                   CONSTRAINT FK_FOOD_POST_LIKES_FOOD_POST  FOREIGN KEY (board_no) REFERENCES food_post(board_no)
-) ENGINE=INNODB COMMENT '안주게시글반응';
+                                   `likes_type` ENUM('술술 들어가요', '참신해요', '맛없어요', '궁금해요') NOT NULL,
+                                   CONSTRAINT PK_FOOD_LIKES PRIMARY KEY(member_no, board_no, likes_type),
+                                   CONSTRAINT FK_FOOD_POST_LIKES_MEMBER FOREIGN KEY (member_no) REFERENCES member(member_no),
+                                   CONSTRAINT FK_FOOD_POST_LIKES_FOOD_POST FOREIGN KEY (board_no) REFERENCES food_post(board_no)
+) ENGINE=INNODB COMMENT='안주게시글반응';
 
 
 CREATE TABLE `login` (
@@ -314,7 +332,7 @@ CREATE TABLE `food_comment` (
                                 `board_no` INT NOT NULL,
                                 `fc_content` VARCHAR(255) NOT NULL,
                                 `fc_date` VARCHAR(255) NOT NULL,
-                                CONSTRAINT PK_FOOD_COMMENT PRIMARY KEY(food_comment_no,member_no,board_no),
+                                CONSTRAINT PK_FOOD_COMMENT PRIMARY KEY(food_comment_no),  -- 이 부분 수정!
                                 CONSTRAINT FK_FOOD_COMMENT_MEMBER  FOREIGN KEY (member_no) REFERENCES member(member_no),
                                 CONSTRAINT FK_FOOD_COMMENT_FOOD_POST  FOREIGN KEY (board_no) REFERENCES food_post(board_no)
 ) ENGINE=INNODB COMMENT '안주게시글댓글';
@@ -345,91 +363,95 @@ CREATE TABLE `albti_output` (
 
 
 -- 더미데이터 삽입
-
--- 권한: ID를 명시적으로 고정
-INSERT INTO role (role_no, role_name) VALUES
-                                          (1, '관리자'),
-                                          (2, '일반회원');
-
--- 회원: 관리자 계정은 role_no=1, 일반 회원은 role_no=2로 교정 삽입
 INSERT INTO `member`
-(member_role_no, member_id, member_pw, member_name, member_birth, member_phone, member_status, member_active, member_at, member_level)
+(member_role, member_id, member_pw, member_name, member_birth, member_phone, member_status, member_active, member_at, member_level)
 VALUES
-    (1, 'admin01', 'adminpw!', '관리자', '1988-10-10', '010-1111-1111', 'normal', TRUE, '2025-01-05',NULL),
-    (2, 'soju_love', 'drinkpw1!', '박철수', '1995-07-07', '010-2222-2222', 'normal', TRUE, '2025-03-11', 200),
-    (2, 'beer_queen', 'beerpw2!', '김민지', '1998-11-23', '010-3333-3333', 'suspended', FALSE, '2025-04-02', 300),
-    (2, 'wine_master', 'winepw3!', '최영희', '1990-02-17', '010-4444-4444', 'normal', TRUE, '2025-05-20', 220),
-    (2, 'makgeolli', 'makpw4!', '정우성', '1993-12-30', '010-5555-5555', 'normal', TRUE, '2025-06-01', 60),
-    (2, 'cocktail_girl', 'cockpw5!', '한지민', '2000-09-09', '010-6666-6666', 'normal', TRUE, '2025-07-18', 50),
-    (2, 'sake_lover', 'sakpw6!', '오다유키', '1994-01-25', '010-7777-7777', 'normal', TRUE, '2025-08-03', 340),
-    (2, 'champagne_boy', 'champpw7!', '박상혁', '1992-04-19', '010-8888-8888', 'normal', TRUE, '2025-08-25', 200),
-    (2, 'highballer', 'highpw8!', '이진우', '1999-07-15', '010-9999-9999', 'normal', TRUE, '2025-09-01', 50),
-    (2, 'vodka_star', 'vodkapw9!', '안지수', '1997-12-12', '010-1010-1010', 'normal', TRUE, '2025-09-05', 50),
-    (2, 'gin_tonic', 'ginpw10!', '서민호', '1996-06-30', '010-1111-2222', 'normal', TRUE, '2025-09-07', 50),
-    (2, 'whisky_time', 'whiskypw11!', '김성훈', '1989-08-21', '010-2222-3333', 'withdrawn', FALSE, '2025-09-10', 500),
-    (2, 'rum_rider', 'rumpw12!', '홍길동', '1991-09-15', '010-3333-4444', 'normal', TRUE, '2025-09-11', 50),
-    (2, 'tequila99', 'teqpw13!', '최다혜', '1998-05-22', '010-4444-5555', 'normal', TRUE, '2025-09-12', 60),
-    (2, 'soju_kim', 'sojupw14!', '김철민', '1995-11-30', '010-5555-6666', 'normal', TRUE, '2025-09-13',340),
-    (2, 'beer_lee', 'beerpw15!', '이수진', '1993-03-18', '010-6666-7777', 'suspended', FALSE, '2025-09-14', 200),
-    (2, 'wine_park', 'winepw16!', '박지영', '1990-01-07', '010-7777-8888', 'normal', TRUE, '2025-09-15', 200),
-    (1, 'admin02', 'adminpw2!', '서관리', '1985-06-05', '010-8888-9999', 'normal', TRUE, '2025-09-16', NULL),
-    (2, 'bbq_master', 'pw1!', '이서준', '1994-02-14', '010-1212-1212', 'normal', TRUE, '2025-09-16', 150),
-    (2, 'sool_scholar', 'pw2!', '김하늘', '1997-03-01', '010-1313-1313', 'normal', TRUE, '2025-09-16', 140),
-    (2, 'wine_beginner', 'pw3!', '최다연', '2001-09-09', '010-1414-1414', 'normal', TRUE, '2025-09-17', 200),
-    (2, 'beer_coder', 'pw4!', '박도윤', '1996-05-22', '010-1515-1515', 'normal', TRUE, '2025-09-17', 340),
-    (2, 'mak_fan', 'pw5!', '정윤아', '1999-08-30', '010-1616-1616', 'normal', TRUE, '2025-09-17', 340),
-    (2, 'high_holic', 'pw6!', '오세준', '1995-12-02', '010-1717-1717', 'normal', TRUE, '2025-09-18', 200),
-    (2, 'sake_trip', 'pw7!', '장유나', '1998-01-28', '010-1818-1818', 'normal', TRUE, '2025-09-18', 340),
-    (2, 'wine_note', 'pw8!', '신태훈', '1992-06-06', '010-1919-1919', 'normal', TRUE, '2025-09-18', 700),
-    (2, 'beer_runner', 'pw9!', '한유진', '1997-11-11', '010-2020-2020', 'normal', TRUE, '2025-09-19', 200),
-    (2, 'soju_writer', 'pw10!', '노수현', '1993-07-17', '010-2121-2121', 'normal', TRUE, '2025-09-19', 800);
-
-INSERT INTO alcohol (alcohol_type, alcohol_explain, alcohol_picture)
+    ('ADMIN', 'admin01', 'adminpw!', '관리자', '1988-10-10', '010-1111-1111', 'normal', TRUE, '2025-01-05',NULL),
+    ('USER', 'soju_love', 'drinkpw1!', '박철수', '1995-07-07', '010-2222-2222', 'normal', TRUE, '2025-03-11', 200),
+    ('USER', 'beer_queen', 'beerpw2!', '김민지', '1998-11-23', '010-3333-3333', 'suspended', FALSE, '2025-04-02', 300),
+    ('USER', 'wine_master', 'winepw3!', '최영희', '1990-02-17', '010-4444-4444', 'normal', TRUE, '2025-05-20', 220),
+    ('USER', 'makgeolli', 'makpw4!', '정우성', '1993-12-30', '010-5555-5555', 'normal', TRUE, '2025-06-01', 60),
+    ('USER', 'cocktail_girl', 'cockpw5!', '한지민', '2000-09-09', '010-6666-6666', 'normal', TRUE, '2025-07-18', 50),
+    ('USER', 'sake_lover', 'sakpw6!', '오다유키', '1994-01-25', '010-7777-7777', 'normal', TRUE, '2025-08-03', 340),
+    ('USER', 'champagne_boy', 'champpw7!', '박상혁', '1992-04-19', '010-8888-8888', 'normal', TRUE, '2025-08-25', 200),
+    ('USER', 'highballer', 'highpw8!', '이진우', '1999-07-15', '010-9999-9999', 'normal', TRUE, '2025-09-01', 50),
+    ('USER', 'vodka_star', 'vodkapw9!', '안지수', '1997-12-12', '010-1010-1010', 'normal', TRUE, '2025-09-05', 50),
+    ('USER', 'gin_tonic', 'ginpw10!', '서민호', '1996-06-30', '010-1111-2222', 'normal', TRUE, '2025-09-07', 50),
+    ('USER', 'whisky_time', 'whiskypw11!', '김성훈', '1989-08-21', '010-2222-3333', 'withdrawn', FALSE, '2025-09-10', 500),
+    ('USER', 'rum_rider', 'rumpw12!', '홍길동', '1991-09-15', '010-3333-4444', 'normal', TRUE, '2025-09-11', 50),
+    ('USER', 'tequila99', 'teqpw13!', '최다혜', '1998-05-22', '010-4444-5555', 'normal', TRUE, '2025-09-12', 60),
+    ('USER', 'soju_kim', 'sojupw14!', '김철민', '1995-11-30', '010-5555-6666', 'normal', TRUE, '2025-09-13',340),
+    ('USER', 'beer_lee', 'beerpw15!', '이수진', '1993-03-18', '010-6666-7777', 'suspended', FALSE, '2025-09-14', 200),
+    ('USER', 'wine_park', 'winepw16!', '박지영', '1990-01-07', '010-7777-8888', 'normal', TRUE, '2025-09-15', 200),
+    ('ADMIN', 'admin02', 'adminpw2!', '서관리', '1985-06-05', '010-8888-9999', 'normal', TRUE, '2025-09-16', NULL),
+    ('USER', 'bbq_master', 'pw1!', '이서준', '1994-02-14', '010-1212-1212', 'normal', TRUE, '2025-09-16', 150),
+    ('USER', 'sool_scholar', 'pw2!', '김하늘', '1997-03-01', '010-1313-1313', 'normal', TRUE, '2025-09-16', 140),
+    ('USER', 'wine_beginner', 'pw3!', '최다연', '2001-09-09', '010-1414-1414', 'normal', TRUE, '2025-09-17', 200),
+    ('USER', 'beer_coder', 'pw4!', '박도윤', '1996-05-22', '010-1515-1515', 'normal', TRUE, '2025-09-17', 340),
+    ('USER', 'mak_fan', 'pw5!', '정윤아', '1999-08-30', '010-1616-1616', 'normal', TRUE, '2025-09-17', 340),
+    ('USER', 'high_holic', 'pw6!', '오세준', '1995-12-02', '010-1717-1717', 'normal', TRUE, '2025-09-18', 200),
+    ('USER', 'sake_trip', 'pw7!', '장유나', '1998-01-28', '010-1818-1818', 'normal', TRUE, '2025-09-18', 340),
+    ('USER', 'wine_note', 'pw8!', '신태훈', '1992-06-06', '010-1919-1919', 'normal', TRUE, '2025-09-18', 700),
+    ('USER', 'beer_runner', 'pw9!', '한유진', '1997-11-11', '010-2020-2020', 'normal', TRUE, '2025-09-19', 200),
+    ('USER', 'soju_writer', 'pw10!', '노수현', '1993-07-17', '010-2121-2121', 'normal', TRUE, '2025-09-19', 800);
+INSERT INTO alcohol (alcohol_no, alcohol_type, alcohol_explain, alcohol_picture)
 VALUES
-    (1, '탄산감과 청량감이 특징인 맥주', '/images/alcohol/beer.jpg'),
-    (2, '대한민국 국민 술 소주', '/images/alcohol/soju.jpg'),
-    (3, '쌀로 빚은 전통 발효주 막걸리', '/images/alcohol/makgeolli.jpg'),
-    (4, '축하 자리에서 빠질 수 없는 샴페인', '/images/alcohol/champagne.jpg'),
-    (5, '일본의 전통 쌀 술 사케', '/images/alcohol/sake.jpg'),
-    (6, '중국 대표 고도주 고량주', '/images/alcohol/gaoliang.jpg'),
-    (7, '위스키와 탄산을 섞은 하이볼', '/images/alcohol/highball.jpg'),
-    (8, '포도로 만든 서양 와인', '/images/alcohol/wine.jpg'),
-    (9, '기타 주류 (전통주, 리큐르 등)', '/images/alcohol/etc.jpg');
+    (1, '맥주', '탄산감과 청량감이 특징인 맥주', '/images/alcohol/beer.jpg'),
+    (2, '소주', '대한민국 국민 술 소주', '/images/alcohol/soju.jpg'),
+    (3, '막걸리', '쌀로 빚은 전통 발효주 막걸리', '/images/alcohol/makgeolli.jpg'),
+    (4, '샴페인', '축하 자리에서 빠질 수 없는 샴페인', '/images/alcohol/champagne.jpg'),
+    (5, '사케', '일본의 전통 쌀 술 사케', '/images/alcohol/sake.jpg'),
+    (6, '고량주', '중국 대표 고도주 고량주', '/images/alcohol/gaoliang.jpg'),
+    (7, '하이볼', '위스키와 탄산을 섞은 하이볼', '/images/alcohol/highball.jpg'),
+    (8, '와인', '포도로 만든 서양 와인', '/images/alcohol/wine.jpg'),
+    (9, '기타', '기타 주류 (전통주, 리큐르 등)', '/images/alcohol/etc.jpg');
 
-INSERT INTO food_post (alcohol_no, board_title, board_content, food_explain, member_no, food_picture, board_date, board_seq, confirmed_yn)
+INSERT INTO food_post (alcohol_no, board_title, board_content, food_explain, member_no, food_picture, board_date, board_seq, confirmed_yn, likes_no_1, likes_no_2, likes_no_3, likes_no_4)
 VALUES
-    (1, '치킨과 함께하는 시원한 맥주', '더위를 날려주는 치맥 조합', '바삭한 치킨과 시원한 맥주의 환상 궁합', 2, '/images/food/chicken_beer.jpg', '2025-09-01', 1, TRUE),
-    (2, '삼겹살과 소주의 조합', '한국인의 영원한 소울푸드', '기름진 삼겹살과 깔끔한 소주', 3, '/images/food/samgyeopsal_soju.jpg', '2025-09-02', 2, TRUE),
-    (8, '스테이크와 레드 와인', '분위기 있는 저녁 한 끼', '육즙 가득한 스테이크와 와인의 향연', 4, '/images/food/steak_wine.jpg', '2025-09-03', 3, TRUE),
-    (3, '파전과 막걸리', '비 오는 날의 낭만', '고소한 파전과 구수한 막걸리', 5, '/images/food/pajeon_makgeolli.jpg', '2025-09-04', 4, TRUE),
-    (1,'피자와 라거','탄산 톡톡 라거와 고소한 피자','치즈 풍미UP', 2, '/images/food/pizza_lager.jpg','2025-09-05',5, TRUE),
-    (8,'치즈 플래터와 화이트 와인','가벼운 산도와 고소함','브리/고다/크래커', 4, '/images/food/cheese_white.jpg','2025-09-06',6, TRUE),
-    (2,'골뱅이소면과 소주','매콤새콤에 소주 한 잔','국물까지 완벽', 5, '/images/food/gol_soju.jpg','2025-09-07',7, TRUE),
-    (7,'감자튀김과 하이볼','짭짤바삭+탄산감','맥주대신 하이볼', 9, '/images/food/fries_highball.jpg','2025-09-08',8, TRUE),
-    (9,'훈제치즈와 싱글몰트','스모키 매칭','은은한 피트향과 조화', 11, '/images/food/smoked_malt.jpg','2025-09-09',9, TRUE),
-    (3,'해물파전과 막걸리','역시 비오는 날 정답','파/오징어 듬뿍', 5, '/images/food/haemul_mak.jpg','2025-09-10',10, TRUE);
+    (1, '치킨과 함께하는 시원한 맥주', '더위를 날려주는 치맥 조합', '바삭한 치킨과 시원한 맥주의 환상 궁합', 2, '/images/food/chicken_beer.jpg', '2025-09-01', 1, TRUE, 12, 4, 20, 2),
+    (2, '삼겹살과 소주의 조합', '한국인의 영원한 소울푸드', '기름진 삼겹살과 깔끔한 소주', 3, '/images/food/samgyeopsal_soju.jpg', '2025-09-02', 2, TRUE, 18, 6, 22, 5),
+    (8, '스테이크와 레드 와인', '분위기 있는 저녁 한 끼', '육즙 가득한 스테이크와 와인의 향연', 4, '/images/food/steak_wine.jpg', '2025-09-03', 3, TRUE, 5, 23, 4, 2),
+    (3, '파전과 막걸리', '비 오는 날의 낭만', '고소한 파전과 구수한 막걸리', 5, '/images/food/pajeon_makgeolli.jpg', '2025-09-04', 4, TRUE, 4, 33, 1, 10 ),
+    (1,'피자와 라거','탄산 톡톡 라거와 고소한 피자','치즈 풍미UP', 2, '/images/food/pizza_lager.jpg','2025-09-05',5, TRUE, 1, 13, 8, 4),
+    (8,'치즈 플래터와 화이트 와인','가벼운 산도와 고소함','브리/고다/크래커', 4, '/images/food/cheese_white.jpg','2025-09-06',6, TRUE, 10, 3, 4, 9),
+    (2,'골뱅이소면과 소주','매콤새콤에 소주 한 잔','국물까지 완벽', 5, '/images/food/gol_soju.jpg','2025-09-07',7, TRUE, 4, 6, 19, 2),
+    (7,'감자튀김과 하이볼','짭짤바삭+탄산감','맥주대신 하이볼', 9, '/images/food/fries_highball.jpg','2025-09-08',8, TRUE, 18, 2, 5, 8),
+    (9,'훈제치즈와 싱글몰트','스모키 매칭','은은한 피트향과 조화', 11, '/images/food/smoked_malt.jpg','2025-09-09',9, TRUE, 7, 9, 1, 8),
+    (3,'해물파전과 막걸리','역시 비오는 날 정답','파/오징어 듬뿍', 5, '/images/food/haemul_mak.jpg','2025-09-10',10, TRUE, 1, 3, 5, 16);
 
-
-INSERT INTO photo_review (board_no, review_title, review_data, review_content, review_like)
+INSERT INTO photo_review (board_no, member_no, review_title, review_date, review_content, review_like)
 VALUES
-    (1, '치맥 인증샷', '2025-09-05', '정말 시원하고 맛있었어요!', 12),
-    (2, '삼겹살엔 역시 소주', '2025-09-06', '소주 없으면 섭섭하죠.', 8),
-    (3, '스테이크와 와인', '2025-09-07', '레드 와인이 고기랑 너무 잘 어울려요.', 15),
-    (5, '피맥 말고 피-라', '2025-09-06', '라거도 잘 어울리네', 6),
-    (6, '화이트와인엔 치즈', '2025-09-07', '산도/지방 밸런스 굿', 10),
-    (7, '골소 소주 국룰', '2025-09-08', '매콤상큼 술 진도 쭉', 4),
-    (8, '감튀엔 하이볼', '2025-09-09', '탄산감이 느끼함 컷', 7),
-    (9, '스모키 스모키', '2025-09-10', '고급진 안주 매칭', 9),
-    (10, '막걸리엔 파전', '2025-09-11', '전/막 조합은 진리', 8),
-    (1, '치맥 2차 인증', '2025-09-12', '이번엔 양념치킨', 5);
+    (1, 1,'치맥 인증샷', '2025-09-05', '정말 시원하고 맛있었어요!', 12),
+    (2, 2,'삼겹살엔 역시 소주', '2025-09-06', '소주 없으면 섭섭하죠.', 8),
+    (3, 4,'스테이크와 와인', '2025-09-07', '레드 와인이 고기랑 너무 잘 어울려요.', 15),
+    (5, 10,'피맥 말고 피-라', '2025-09-06', '라거도 잘 어울리네', 6),
+    (6, 11,'화이트와인엔 치즈', '2025-09-07', '산도/지방 밸런스 굿', 10),
+    (7, 12,'골소 소주 국룰', '2025-09-08', '매콤상큼 술 진도 쭉', 4),
+    (8, 17,'감튀엔 하이볼', '2025-09-09', '탄산감이 느끼함 컷', 7),
+    (9, 1,'스모키 스모키', '2025-09-10', '고급진 안주 매칭', 9),
+    (10, 2,'막걸리엔 파전', '2025-09-11', '전/막 조합은 진리', 8),
+    (1, 3,'치맥 2차 인증', '2025-09-12', '이번엔 양념치킨', 5);
 
-INSERT INTO follow (following, follower)
-VALUES
-    (2, 3),
-    (3, 4),
-    (4, 5),
-    (5, 2);
-
+INSERT INTO follow (follower_no, following_no) VALUES
+                                                   (2, 3),   -- soju_love  -> beer_queen
+                                                   (2, 4),   -- soju_love  -> wine_master
+                                                   (2, 5),   -- soju_love  -> makgeolli
+                                                   (3, 2),   -- beer_queen -> soju_love
+                                                   (3, 4),   -- beer_queen -> wine_master
+                                                   (4, 2),   -- wine_master -> soju_love
+                                                   (4, 5),   -- wine_master -> makgeolli
+                                                   (5, 2),   -- makgeolli  -> soju_love
+                                                   (6, 2),   -- cocktail_girl -> soju_love
+                                                   (6, 3),   -- cocktail_girl -> beer_queen
+                                                   (7, 8),   -- sake_lover -> champagne_boy
+                                                   (7, 5),   -- sake_lover -> makgeolli
+                                                   (8, 9),   -- champagne_boy -> highballer
+                                                   (8, 4),   -- champagne_boy -> wine_master
+                                                   (9, 6),   -- highballer -> cocktail_girl
+                                                   (9, 2),   -- highballer -> soju_love
+                                                   (10, 2),  -- vodka_star  -> soju_love
+                                                   (10, 4),  -- vodka_star  -> wine_master
+                                                   (10, 8);  -- vodka_star  -> champagne_boy
 INSERT INTO bookmark (member_no, board_no)
 VALUES
     (2, 1),
@@ -515,12 +537,13 @@ VALUES
     ('menu.png', 'image/png', 'menu_20250905.png', '/uploads/dm/1', '2025-09-05', 1);
 
 -- 5) 안주 게시글 반응(좋아요/싫어요 등 타입 가정)
-INSERT INTO food_post_likes (member_no, board_no, likes_type, likes_count)
+INSERT INTO food_post_likes (member_no, board_no, likes_type)
 VALUES
-    (3, 1, 'like', 1),
-    (4, 2, 'like', 1),
-    (5, 3, 'like', 1),
-    (2, 4, 'like', 1);
+    (3, 1, '궁금해요'),
+    (4, 2, '참신해요'),
+    (5, 3, '술술 들어가요'),
+    (2, 4, '맛없어요');
+
 
 -- 6) 안주 게시글 댓글
 INSERT INTO food_comment (member_no, board_no, fc_content, fc_date)
@@ -557,6 +580,14 @@ VALUES
 --     worldcup 1: 맥주(1), 와인(8)
 --     worldcup 2: 소주(2), 하이볼(7)
 --     일관 참조를 위해 worldcup_alcohol_no를 명시적으로 고정
+
+-- 문의 게시글 답변
+INSERT INTO qna_comment (qna_post_no, comment_member_no, comment_content, comment_at)
+VALUES
+    (1, 1, '안녕하세요. 파일 업로드 오류는 금일 중 조치하겠습니다.', '2025-09-12 10:30:00'),
+    (2, 1, '월드컵 일정은 매주 월요일에 공지됩니다.', '2025-09-13 09:15:00'),
+    (1, 1, '추가 문의 있으시면 언제든 연락주세요.', '2025-09-14 15:00:00');
+
 INSERT INTO worldcup_alcohol (worldcup_alcohol_no, alcohol_no, worldcup_no)
 VALUES
     (1, 1, 1),
