@@ -337,7 +337,8 @@
 <img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%ED%9A%8C%EC%9B%90%2C%EA%B4%80%EB%A6%AC%EC%9E%90/2.%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%84%B1%EA%B3%B5_%ED%9A%8C%EC%9B%90.png" />
 
 - 신고내역 조회
-<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/Eat
+<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%ED%9A%8C%EC%9B%90%2C%EA%B4%80%EB%A6%AC%EC%9E%90/%EC%8B%A0%EA%B3%A0%EB%82%B4%EC%97%AD%20%EC%A1%B0%ED%9A%8C_%ED%9A%8C%EC%9B%90.png" />
+</details>
 
 
 
@@ -362,10 +363,6 @@
 </details>
 
 
-
-
-
----
 
 
 
