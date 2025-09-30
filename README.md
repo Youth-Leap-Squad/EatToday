@@ -213,7 +213,7 @@
 ### WBS [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
 <details>
   <summary><b>WBS</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS,%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C,%20ERD,%20DDD%20%EB%93%B1%EB%93%B1/WBS.png?raw=true" />
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS,%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C,%20ERD,%20DDD%20%EB%93%B1%EB%93%B1/WBS.png?raw=true" />
 </details>
 
 
@@ -234,7 +234,7 @@
 ### ERD [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
 <details>
   <summary><b>ERD</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
 </details>
 
 ---
@@ -243,7 +243,7 @@
 ### DDD [상세보기](https://miro.com/app/board/uXjVJM9P4HM=/?share_link_id=369149134500)
 <details>
   <summary><b>DDD</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
 </details>
 
 ---
@@ -251,9 +251,110 @@
 
 ### REST API 문서 [상세보기]()
 <details>
-  <summary><b>POSTMAN</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+  <summary><b>DM</b></summary>
+- DM 추가
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/DM/DM-%EC%B6%94%EA%B0%80.png" />
+
+- DM 삭제
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/DM/DM-%EC%82%AD%EC%A0%9C.png" />
 </details>
+
+<details>
+  <summary><b>게시글</b></summary>
+- 안주 추가
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EA%B2%8C%EC%8B%9C%EA%B8%80/%EC%95%88%EC%A3%BC%20%EC%B6%94%EA%B0%80.png" />
+
+- 반응 추가
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EA%B2%8C%EC%8B%9C%EA%B8%80/%EB%B0%98%EC%9D%91%20%EC%B6%94%EA%B0%80.png" />
+</details>
+
+<details>
+  <summary><b>라운지</b></summary>
+- 라운지 조회(좋아요 순)
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EB%9D%BC%EC%9A%B4%EC%A7%80/%EB%9D%BC%EC%9A%B4%EC%A7%80%20%EC%A1%B0%ED%9A%8C(%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%88%9C).png" />
+
+- 라운지 조회(술 종류 별)
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EB%9D%BC%EC%9A%B4%EC%A7%80/%EB%9D%BC%EC%9A%B4%EC%A7%80%20%EC%A1%B0%ED%9A%8C(%EC%88%A0%20%EC%A2%85%EB%A5%98%20%EB%B3%84).png" />
+</details>
+
+<details>
+  <summary><b>문의사항</b></summary>
+- 문의사항 등록
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EB%AC%B8%EC%9D%98%EC%82%AC%ED%95%AD/%EB%AC%B8%EC%9D%98%20%EB%93%B1%EB%A1%9D.png" />
+
+- 문의사항 수정
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/postman/%EB%AC%B8%EC%9D%98%EC%82%AC%ED%95%AD/%EB%AC%B8%EC%9D%98%EC%82%AC%ED%95%AD%20%EC%88%98%EC%A0%95.png" />
+</details>
+
+<details>
+  <summary><b>사진리뷰</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>사진리뷰댓글</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>신고</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>이벤트</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>팔로우</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>회원, 관리자</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+<details>
+  <summary><b>테스트 케이스</b></summary>
+- 
+<img width="1714" height="1863" src="" />
+
+- 
+<img width="1714" height="1863" src="" />
+</details>
+
+
+
+
+
+
+
 
 ---
 ## ✅ 테스트 및 품질 (Testing & Quality Assurance)
@@ -261,10 +362,10 @@
 ### TEST 코드 
 <details>
   <summary><b>POSTMAN</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
 
   <summary><b>POSTMAN</b></summary>
-<img width="1714" height="1863" alt="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
+<img width="1714" height="1863" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/WBS%2C%20%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%20%EB%AA%85%EC%84%B8%EC%84%9C%2C%20ERD%2C%20DDD%20%EB%93%B1%EB%93%B1/ERD.png" />
   
 </details>
 
