@@ -27,7 +27,7 @@
 
 #### [📋 관리 및 계획](#-관리-및-계획) <br>
 
-#### [🗂️ 데이터 및 구조](#-데이터-및-구조) <br>
+#### [🗂️ 데이터 및 구조](#data-structure) <br>
 
 #### [🏗️ 설계 및 아키텍처](#-설계-및-아키텍처) <br>
 
@@ -243,6 +243,7 @@
   
 ---
 
+<a id="data-structure"></a>
 ## 🗂️ 데이터 및 구조
 
 ### ERD [상세보기](https://www.erdcloud.com/d/uj6RjgfLGPpMRHLLK)
