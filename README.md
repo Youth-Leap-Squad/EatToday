@@ -375,68 +375,49 @@
 <details>
   <summary><b>회원, 관리자</b></summary>
 - 로그인 시, 휴대폰 번호로 회원을 조회해 인증 정보(UserDetails)를 생성하는 기능
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%ED%9A%8C%EC%9B%90,%EA%B4%80%EB%A6%AC%EC%9E%90/%ED%9A%8C%EC%9B%90%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%8B%9C,%20%ED%9C%B4%EB%8C%80%ED%8F%B0%20%EB%B2%88%ED%98%B8%EB%A1%9C%20%ED%9A%8C%EC%9B%90%EC%9D%84%20%EC%A1%B0%ED%9A%8C%ED%95%B4%20%EC%9D%B8%EC%A6%9D%20%EC%A0%95%EB%B3%B4(UserDetails)%EB%A5%BC%20%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94%20%EA%B8%B0%EB%8A%A5.png?raw=true" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%ED%9A%8C%EC%9B%90,%EA%B4%80%EB%A6%AC%EC%9E%90/%ED%9A%8C%EC%9B%90%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%8B%9C,%20%ED%9C%B4%EB%8C%80%ED%8F%B0%20%EB%B2%88%ED%98%B8%EB%A1%9C%20%ED%9A%8C%EC%9B%90%EC%9D%84%20%EC%A1%B0%ED%9A%8C%ED%95%B4%20%EC%9D%B8%EC%A6%9D%20%EC%A0%95%EB%B3%B4(UserDetails)%EB%A5%BC%20%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94%20%EA%B8%B0%EB%8A%A5.png?raw=true" />
 " />
   
 - 신고처리시 회원 상태와 신고 횟수 업데이트
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%ED%9A%8C%EC%9B%90,%EA%B4%80%EB%A6%AC%EC%9E%90/%EC%8B%A0%EA%B3%A0%EC%B2%98%EB%A6%AC%EC%8B%9C_member%EC%83%81%ED%83%9C%EC%99%80_reportCount%EA%B0%80_%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%90%9C%EB%8B%A4.png?raw=true" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%ED%9A%8C%EC%9B%90,%EA%B4%80%EB%A6%AC%EC%9E%90/%EC%8B%A0%EA%B3%A0%EC%B2%98%EB%A6%AC%EC%8B%9C_member%EC%83%81%ED%83%9C%EC%99%80_reportCount%EA%B0%80_%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%EB%90%9C%EB%8B%A4.png?raw=true" />
 " />
 </details>
 
 <details>
   <summary><b>이벤트</b></summary>
 - 주차별 월드컵 게임 랭킹 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
-" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
   
 - 회원별 술BTI 검사 결과 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%ED%9A%8C%EC%9B%90%EB%B3%84%20%EC%88%A0BTI%20%EA%B2%80%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
-" />
-</details>
-
-<details>
-  <summary><b>이벤트</b></summary>
-- 주차별 월드컵 게임 랭킹 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
-" />
-  
-- 회원별 술BTI 검사 결과 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%ED%9A%8C%EC%9B%90%EB%B3%84%20%EC%88%A0BTI%20%EA%B2%80%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
-" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%ED%9A%8C%EC%9B%90%EB%B3%84%20%EC%88%A0BTI%20%EA%B2%80%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.png?raw=true" />
 </details>
 
 <details>
   <summary><b>SNS</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
   
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
+  - DM
+<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/DM.png" />
+
+  - Follow
+<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/Follow.png" />
+
+  - 사진리뷰
+<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/%EC%82%AC%EC%A7%84%EB%A6%AC%EB%B7%B0.png" />
+
+  - 사진리뷰 댓글
+<img width="1000" height="900" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/%EC%82%AC%EC%A7%84%EB%A6%AC%EB%B7%B0%EB%8C%93%EA%B8%80.png" />
 </details>
 
 <details>
   <summary><b>게시판</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
-  
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
+  - 게시글등록 매핑 검증 & 승인 시 게시글수정 차단
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EA%B2%8C%EC%8B%9C%EA%B8%80%EB%93%B1%EB%A1%9D%20%EB%A7%A4%ED%95%91%20%EA%B2%80%EC%A6%9D%20%26%20%EC%8A%B9%EC%9D%B8%20%EC%8B%9C%20%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%88%98%EC%A0%95%20%EC%B0%A8%EB%8B%A8.png" />
 </details>
 
 <details>
   <summary><b>문의 사항 게시판/라운지/신고</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
-  
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
-
+- 신고 확정
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%8B%A0%EA%B3%A0/%EC%8B%A0%EA%B3%A0%20%ED%99%95%EC%A0%95.png" />
 </details>
 
 
@@ -445,11 +426,46 @@
 ## 🔭 회고록
 
 |   조원 이름	| 회고  	 |
-|---	|-------|
+|-----------|--------|
 |   **김윤지**   | |
-|   **김진호**   | ㅇ |
+|   **김진호**   | |
 |   **남우경**   | |
-|   **이재근**   | 	   |
-|   **이현수** 	 |  	 |
+|   **이재근**   | |
+|   **이현수**   | |
+
+|   조원 이름	| 회고  	 |
+|-----------|--------|
+|   **김윤지**   | |
+|   **김진호**   | |
+|   **남우경**   | |
+|   **이재근**   | |
+|   **이현수**   | |
+
+
+|   조원 이름	| 회고  	 |
+|-----------|--------|
+|   **김윤지**   | |
+|   **김진호**   | |
+|   **남우경**   | |
+|   **이재근**   | |
+|   **이현수**   | |
+
+
+|   조원 이름	| 회고  	 |
+|-----------|--------|
+|   **김윤지**   | |
+|   **김진호**   | |
+|   **남우경**   | |
+|   **이재근**   | |
+|   **이현수**   | |
+
+
+|   조원 이름	| 회고  	 |
+|-----------|--------|
+|   **김윤지**   | |
+|   **김진호**   | |
+|   **남우경**   | |
+|   **이재근**   | |
+|   **이현수**   | |
 
 ---
