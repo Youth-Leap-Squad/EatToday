@@ -27,7 +27,8 @@
 #### [🧱 아키텍처 & CQRS](#-아키텍처--cqrs)  <br>
 
 #### [📊 요구사항 명세서](#-요구사항-명세서)  <br>
-#### [📋 관리 및 계획 (Management & Planning)](#-관리 및 계획 (Management & Planning)) <br>
+
+#### [📋 관리 및 계획](#-관리-및-계획) <br>
 
 #### [📋 테스트 CASE](#-테스트-case) <br>
 
