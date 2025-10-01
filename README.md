@@ -27,8 +27,7 @@
 #### [🧱 아키텍처 & CQRS](#-아키텍처--cqrs)  <br>
 
 #### [📊 요구사항 명세서](#-요구사항-명세서)  <br>
-
-#### [🔗 UML](#-uml)  <br>
+#### [📋 관리 및 계획 (Management & Planning)](#-관리 및 계획 (Management & Planning)) <br>
 
 #### [📋 테스트 CASE](#-테스트-case) <br>
 
@@ -36,9 +35,7 @@
 
 #### [📑 테이블 명세서](#-테이블-명세서)  <br>
 
-#### [🎞 Replication](#-replication)  <br>
-
-#### [🔭 동료 평가](#-동료-평가)  <br>
+#### [🔭 회고록](#-회고록)  <br>
 
 ---
 
@@ -434,6 +431,7 @@
 - 
 <img width="1000" height="900" src="<img width="2385" height="1366" src="" />
 " />
+
 </details>
 
 
