@@ -416,8 +416,8 @@
 
 <details>
   <summary><b>문의 사항 게시판/라운지/신고</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
+- 사용자 신고 처리 및 상태변경
+<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/" />
 " />
   
 - 
