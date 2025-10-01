@@ -384,46 +384,33 @@
 <details>
   <summary><b>이벤트</b></summary>
 - 주차별 월드컵 게임 랭킹 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png" />
-" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png" />
   
 - 회원별 술BTI 검사 결과 조회
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%ED%9A%8C%EC%9B%90%EB%B3%84%20%EC%88%A0BTI%20%EA%B2%80%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.png" />
-" />
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%ED%9A%8C%EC%9B%90%EB%B3%84%20%EC%88%A0BTI%20%EA%B2%80%EC%82%AC%20%EA%B2%B0%EA%B3%BC%20%EC%A1%B0%ED%9A%8C.png" />
 </details>
 
 <details>
   <summary><b>SNS</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
+- 사진리뷰
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/%EC%82%AC%EC%A7%84%EB%A6%AC%EB%B7%B0.png" />
   
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
+- 사진리뷰 댓글
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/sns/%EC%82%AC%EC%A7%84%EB%A6%AC%EB%B7%B0%EB%8C%93%EA%B8%80.png" />
 </details>
 
 <details>
   <summary><b>게시판</b></summary>
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
-  
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
+- 게시글등록 매핑 검증 & 승인 시 게시글수정 차단
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EA%B2%8C%EC%8B%9C%EA%B8%80%EB%93%B1%EB%A1%9D%20%EB%A7%A4%ED%95%91%20%EA%B2%80%EC%A6%9D%20%26%20%EC%8A%B9%EC%9D%B8%20%EC%8B%9C%20%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%88%98%EC%A0%95%20%EC%B0%A8%EB%8B%A8.png" />
+
 </details>
 
 <details>
   <summary><b>문의 사항 게시판/라운지/신고</b></summary>
-- 사용자 신고 처리 및 상태변경
-<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/" />
-" />
+- 신고 확정
+<img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%8B%A0%EA%B3%A0/%EC%8B%A0%EA%B3%A0%20%ED%99%95%EC%A0%95.png" />
   
-- 
-<img width="1000" height="900" src="<img width="2385" height="1366" src="" />
-" />
-
 </details>
 
 
