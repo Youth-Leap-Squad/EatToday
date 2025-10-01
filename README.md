@@ -207,7 +207,7 @@
 
 ---
 
-## 📋 관리 및 계획 (Management & Planning)
+## 📋 관리 및 계획
 
 ### WBS [상세보기](https://docs.google.com/spreadsheets/d/1wRZSPEhjhj0SsW3NB7papSM6vu2WulmTOoR9Q8WDOJY/edit?gid=0#gid=0)
 <details>
