@@ -267,7 +267,7 @@
 
 ## 🔌 인터페이스 및 API
 
-### REST API 문서 [상세보기]()
+### REST API 문서
 <details>
   <summary><b>DM</b></summary>
 - DM 추가
