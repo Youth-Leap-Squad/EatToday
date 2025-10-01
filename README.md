@@ -385,7 +385,8 @@
 <details>
   <summary><b>이벤트</b></summary>
 - 주차별 월드컵 게임 랭킹 조회
-<img width="1000" height="900" width="2385" height="1366" src="" />
+<img width="1000" height="900" src="<img width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%9D%B4%EB%B2%A4%ED%8A%B8/%EC%A3%BC%EC%B0%A8%EB%B3%84%20%EC%9B%94%EB%93%9C%EC%BB%B5%20%EA%B2%8C%EC%9E%84%20%EB%9E%AD%ED%82%B9%20%EC%A1%B0%ED%9A%8C.png" />
+" />
 
   
 - 회원별 술BTI 검사 결과 조회
@@ -412,8 +413,11 @@
 
 <details>
   <summary><b>문의 사항 게시판/라운지/신고</b></summary>
+
 - 신고 확정
 <img width="1000" height="900" width="2385" height="1366" src="https://github.com/Youth-Leap-Squad/EatToday_store/blob/main/src/assets/img/%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%BC%80%EC%9D%B4%EC%8A%A4/%EC%8B%A0%EA%B3%A0/%EC%8B%A0%EA%B3%A0%20%ED%99%95%EC%A0%95.png" />
+
+
 
 
 </details>
