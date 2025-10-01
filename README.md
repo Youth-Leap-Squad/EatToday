@@ -255,6 +255,7 @@
 </details>
 
 ---
+
 ## 🏗️ 설계 및 아키텍처
 
 ### DDD [상세보기](https://miro.com/app/board/uXjVJM9P4HM=/?share_link_id=369149134500)
@@ -264,7 +265,8 @@
 </details>
 
 ---
-## 🔌 인터페이스 및 API (Interfaces & APIs)
+
+## 🔌 인터페이스 및 API
 
 ### REST API 문서 [상세보기]()
 <details>
@@ -367,7 +369,8 @@
 
 
 ---
-## ✅ 테스트 및 품질 (Testing & Quality Assurance)
+
+## ✅ 테스트 및 품질
 
 ### TEST 코드 
 <details>
