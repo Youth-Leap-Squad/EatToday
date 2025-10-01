@@ -30,15 +30,13 @@
 
 #### [📋 관리 및 계획](#-관리-및-계획) <br>
 
-#### [🗂️ 데이터 및 구조 (Data & Structure)](#데이터-및-구조-data--structure) <br>
+#### [🗂️ 데이터 및 구조](#데이터-및-구조) <br>
 
-#### [🏗️ 설계 및 아키텍처 (Design & Architecture)](#설계-및-아키텍처-design--architecture) <br>
+#### [🏗️ 설계 및 아키텍처](#설계-및-아키텍처) <br>
 
-#### [📋 테스트 CASE](#-테스트-case) <br>
+#### [🔌 인터페이스 및 API](인테페이스-및-api) <br> 
 
-#### [📊 DB 설계](#-db-설계)  <br>
-
-#### [📑 테이블 명세서](#-테이블-명세서)  <br>
+#### [✅ 테스트 및 품질](테스트-및-품질) <br>
 
 #### [🔭 회고록](#-회고록)  <br>
 
@@ -248,7 +246,7 @@
   
 ---
 
-## 🗂️ 데이터 및 구조 (Data & Structure)
+## 🗂️ 데이터 및 구조
 
 ### ERD [상세보기](https://www.erdcloud.com/d/uj6RjgfLGPpMRHLLK)
 <details>
@@ -257,7 +255,7 @@
 </details>
 
 ---
-## 🏗️ 설계 및 아키텍처 (Design & Architecture)
+## 🏗️ 설계 및 아키텍처
 
 ### DDD [상세보기](https://miro.com/app/board/uXjVJM9P4HM=/?share_link_id=369149134500)
 <details>
